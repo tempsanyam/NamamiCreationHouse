@@ -206,9 +206,11 @@ export interface AdminUser {
   id: string;
   name: string;
   email: string;
+  password: string;
   role: 'Super Admin' | 'Editor' | 'Content Manager';
   avatar: string;
   lastLogin?: string;
+}
 }
 
 export interface MenuItem {
