@@ -53,7 +53,24 @@ export const UsersSection: React.FC = () => {
           <thead>
             <tr className="border-b border-slate-800 text-slate-400 uppercase tracking-wider text-[10px]">
               <th className="py-3 px-3">User Profile</th>
-              <th className="py-3 px-3">Email Address</th>
+              <th className="py-3 px-3">Email Address</th><div>
+  <label className="block text-xs text-slate-300 mb-1">
+    Password
+  </label>
+
+  <input
+    type="password"
+    required
+    value={newUser.password}
+    onChange={(e) =>
+      setNewUser({
+        ...newUser,
+        password: e.target.value,
+      })
+    }
+    className="w-full px-3 py-2 rounded-xl bg-[#07151E] border border-slate-700 text-xs text-white"
+  />
+</div>
               <th className="py-3 px-3">Role & Permissions</th>
               <th className="py-3 px-3">Last Active</th>
               <th className="py-3 px-3 text-right">Action</th>
