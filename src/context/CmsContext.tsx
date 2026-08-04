@@ -307,16 +307,26 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const login = (email: string, password: string) => {
-   ...
-}
-    // Standard secure auth validation for admin panel
-    if (email.toLowerCase().trim() === "admin@namamicreationhouse.com" || email.toLowerCase().trim() === "admin") {
-      if (pass === "admin123" || pass === "admin") {
-        const adminUser = users[0] || DEFAULT_USERS[0];
-        const userObj = { ...adminUser, lastLogin: new Date().toLocaleString() };
-        setCurrentUser(userObj);
-        localStorage.setItem("namami_admin_user", JSON.stringify(userObj));
-        return true;
+  const foundUser = users.find(
+    user =>
+      user.email.toLowerCase().trim() === email.toLowerCase().trim() &&
+      user.password === password
+  );
+
+  if (!foundUser) {
+    return false;
+  }
+
+  const userObj = {
+    ...foundUser,
+    lastLogin: new Date().toLocaleString()
+  };
+
+  setCurrentUser(userObj);
+  localStorage.setItem("namami_admin_user", JSON.stringify(userObj));
+
+  return true;
+};
       }
     }
     const foundUser = users.find(u => u.email.toLowerCase() === email.toLowerCase());
