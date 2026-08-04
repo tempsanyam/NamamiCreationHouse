@@ -160,7 +160,7 @@ export const UsersSection: React.FC = () => {
 
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-amber-400" />
-                Add Admin User
+                Add Admin User TEST 123
               </h3>
 
               <button
