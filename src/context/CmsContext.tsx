@@ -322,7 +322,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       }
     }
     const foundUser = users.find(u => u.email.toLowerCase() === email.toLowerCase());
-    if (foundUser && pass === "admin123") {
+    if (foundUser && pass === "sanyam88") {
       const userObj = { ...foundUser, lastLogin: new Date().toLocaleString() };
       setCurrentUser(userObj);
       localStorage.setItem("namami_admin_user", JSON.stringify(userObj));
