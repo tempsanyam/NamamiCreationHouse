@@ -132,20 +132,20 @@ export const UsersSection: React.FC = () => {
                   {usr.lastLogin || "Never"}
                 </td>
 
-                <td className="py-3 px-3 text-right">
-                  {usr.role !== "Super Admin" && (
-                    <button
-                      onClick={() => {
-                        if (confirm(`Remove user "${usr.name}"?`)) {
-                          deleteAdminUser(usr.id);
-                        }
-                      }}
-                      className="p-2 rounded-lg bg-slate-800 hover:bg-red-900 text-red-400"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
-                  )}
-                </td>
+               <td className="py-3 px-3 text-right">
+  {usr.role !== "Super Admin" && (
+    <button
+      onClick={() => {
+        if (window.confirm(`Delete "${usr.name}"?`)) {
+          deleteAdminUser(usr.id);
+        }
+      }}
+      className="px-3 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white text-xs font-semibold"
+    >
+      Delete
+    </button>
+  )}
+</td>
               </tr>
             ))}
           </tbody>
