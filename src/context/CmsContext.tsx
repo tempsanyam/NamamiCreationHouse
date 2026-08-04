@@ -300,7 +300,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const login = (email: string, password: string) => {
   const foundUser = users.find(
-    user =>
+    (user) =>
       user.email.toLowerCase().trim() === email.toLowerCase().trim() &&
       user.password === password
   );
@@ -311,7 +311,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const userObj = {
     ...foundUser,
-    lastLogin: new Date().toLocaleString()
+    lastLogin: new Date().toLocaleString(),
   };
 
   setCurrentUser(userObj);
@@ -319,17 +319,6 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   return true;
 };
-      }
-    }
-    const foundUser = users.find(u => u.email.toLowerCase() === email.toLowerCase());
-    if (foundUser && pass === "sanyam88") {
-      const userObj = { ...foundUser, lastLogin: new Date().toLocaleString() };
-      setCurrentUser(userObj);
-      localStorage.setItem("namami_admin_user", JSON.stringify(userObj));
-      return true;
-    }
-    return false;
-  };
 
   const logout = () => {
     setCurrentUser(null);
