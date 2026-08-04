@@ -304,7 +304,9 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
   };
 
-  const login = (email: string, pass: string): boolean => {
+  const login = (email: string, password: string) => {
+   ...
+}
     // Standard secure auth validation for admin panel
     if (email.toLowerCase().trim() === "admin@namamicreationhouse.com" || email.toLowerCase().trim() === "admin") {
       if (pass === "admin123" || pass === "admin") {
