@@ -71,22 +71,24 @@ const DEFAULT_SEO: SeoConfig = {
 };
 
 const DEFAULT_USERS: AdminUser[] = [
-  {
-    id: "usr-1",
-    name: "Namami Admin",
-    email: "admin@namamicreationhouse.com",
-    role: "Super Admin",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
-    lastLogin: "Just Now"
-  },
-  {
-    id: "usr-2",
-    name: "Lead Editor",
-    email: "editor@namamicreationhouse.com",
-    role: "Editor",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
-    lastLogin: "2 Hours Ago"
-  }
+ {
+  id: "usr-1",
+  name: "Namami Admin",
+  email: "admin@namamicreationhouse.com",
+  password: "admin123",
+  role: "Super Admin",
+  avatar: "...",
+  lastLogin: "Just Now"
+}
+ {
+  id: "usr-2",
+  name: "Lead Editor",
+  email: "editor@namamicreationhouse.com",
+  password: "editor123",
+  role: "Editor",
+  avatar: "...",
+  lastLogin: "2 Hours Ago"
+}
 ];
 
 const DEFAULT_HEADER_MENU: MenuItem[] = [
