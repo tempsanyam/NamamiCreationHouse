@@ -7,11 +7,12 @@ export const UsersSection: React.FC = () => {
   const { users, addAdminUser, deleteAdminUser } = useCms();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newUser, setNewUser] = useState<Omit<AdminUser, 'id'>>({
-    name: '',
-    email: '',
-    role: 'Editor',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-  });
+  name: '',
+  email: '',
+  password: '',
+  role: 'Editor',
+  avatar: 'https://....'
+});
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
