@@ -175,4 +175,105 @@ export const UsersSection: React.FC = () => {
               onSubmit={handleAdd}
               className="space-y-4"
             >
+              <div>
+  <label className="block text-xs text-slate-300 mb-1">
+    Full Name
+  </label>
+
+  <input
+    type="text"
+    required
+    value={newUser.name}
+    onChange={(e) =>
+      setNewUser({
+        ...newUser,
+        name: e.target.value,
+      })
+    }
+    className="w-full px-3 py-2 rounded-xl bg-[#07151E] border border-slate-700 text-white"
+  />
+</div>
+
+<div>
+  <label className="block text-xs text-slate-300 mb-1">
+    Email Address
+  </label>
+
+  <input
+    type="email"
+    required
+    value={newUser.email}
+    onChange={(e) =>
+      setNewUser({
+        ...newUser,
+        email: e.target.value,
+      })
+    }
+    className="w-full px-3 py-2 rounded-xl bg-[#07151E] border border-slate-700 text-white"
+  />
+</div>
+
+<div>
+  <label className="block text-xs text-slate-300 mb-1">
+    Password
+  </label>
+
+  <input
+    type="password"
+    required
+    value={newUser.password}
+    onChange={(e) =>
+      setNewUser({
+        ...newUser,
+        password: e.target.value,
+      })
+    }
+    className="w-full px-3 py-2 rounded-xl bg-[#07151E] border border-slate-700 text-white"
+  />
+</div>
+
+<div>
+  <label className="block text-xs text-slate-300 mb-1">
+    Role
+  </label>
+
+  <select
+    value={newUser.role}
+    onChange={(e) =>
+      setNewUser({
+        ...newUser,
+        role: e.target.value as AdminUser['role'],
+      })
+    }
+    className="w-full px-3 py-2 rounded-xl bg-[#07151E] border border-slate-700 text-white"
+  >
+    <option value="Editor">Editor</option>
+    <option value="Content Manager">Content Manager</option>
+    <option value="Super Admin">Super Admin</option>
+  </select>
+</div>
+
+<div className="flex justify-end gap-3 pt-4">
+  <button
+    type="button"
+    onClick={() => setIsModalOpen(false)}
+    className="px-4 py-2 rounded-xl bg-slate-700 text-white"
+  >
+    Cancel
+  </button>
+
+  <button
+    type="submit"
+    className="px-4 py-2 rounded-xl bg-amber-500 text-black font-bold"
+  >
+    Create User
+  </button>
+</div>
+                          </form>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
               
