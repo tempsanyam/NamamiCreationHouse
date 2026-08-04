@@ -150,12 +150,7 @@ const [password, setPassword] = useState('');
           </button>
         </form>
 
-        {/* Default Credential Notice */}
-        <div className="mt-8 pt-6 border-t border-slate-800 text-center">
-          <p className="text-[11px] text-slate-400 font-mono">
-            Default Credentials: <span className="text-amber-300 font-semibold">admin@namamicreationhouse.com</span> / <span className="text-amber-300 font-semibold">admin123</span>
-          </p>
-        </div>
+     
       </motion.div>
 
       {/* Forgot Password Modal */}
