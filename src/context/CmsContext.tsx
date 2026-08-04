@@ -75,20 +75,12 @@ const DEFAULT_USERS: AdminUser[] = [
   id: "usr-1",
   name: "Namami Admin",
   email: "admin@namamicreationhouse.com",
-  password: "admin123",
+  password: "sanyam88",
   role: "Super Admin",
   avatar: "...",
   lastLogin: "Just Now"
 }
- {
-  id: "usr-2",
-  name: "Lead Editor",
-  email: "editor@namamicreationhouse.com",
-  password: "editor123",
-  role: "Editor",
-  avatar: "...",
-  lastLogin: "2 Hours Ago"
-}
+
 ];
 
 const DEFAULT_HEADER_MENU: MenuItem[] = [
